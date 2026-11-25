@@ -465,6 +465,7 @@
           </p>
         </div>
 
+        <!-- блок div  footer-social -->
         <div class="footer-social">
           <p class="footer-social-text">Social media</p>
           <ul class="social-menu">
@@ -498,7 +499,125 @@
             </li>
           </ul>
         </div>
+        <!-- третий блок футера, форма подписки -->
+        <div class="container-form-footer">
+          <p class="modal-text">Subscribe</p>
+          <form class="subscribe-form">
+            <label class="label-form">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+              />
+            </label>
+            <button class="subscribe-btn" type="submit">
+              Subscribe
+              <svg class="subscribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#plane"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
+
+    <!-- Бэкдроп модальное окно  -->
+    <div class="modal-overlay is-open">
+      <div id="modal" class="modal">
+        <button class="modal-close-btn" type="button" aria-label="Close modal">
+          <svg class="modal-close-icon" width="8" height="8" aria-hidden="true">
+            <use href="./images/icons.svg#cross"></use>
+          </svg>
+        </button>
+        <form class="modal-form">
+          <p class="modal-text">
+            Leave your contacts and we will call you back
+          </p>
+          <div class="form-field">
+            <label class="form-name">Name</label>
+            <div class="form-input-wrap">
+              <svg
+                class="form-input-icon"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <use href="./images/icons.svg#man"></use>
+              </svg>
+              <input class="form-input" id="name" name="name" type="text" />
+            </div>
+          </div>
+          <div class="form-field">
+            <label class="form-name" for="phone">Phone</label>
+
+            <div class="form-input-wrap">
+              <svg
+                class="form-input-icon"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+              <input class="form-input" id="phone" name="phone" type="tel" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-name" for="email">Email</label>
+
+            <div class="form-input-wrap">
+              <svg
+                class="form-input-icon"
+                width="18"
+                height="18"
+                aria-hidden="true"
+              >
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+              <input class="form-input" id="email" name="email" type="email" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label class="form-name" for="comment">Comment</label>
+            <textarea
+              class="form-comment"
+              id="comment"
+              name="comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="privacy-field">
+            <input
+              class="visually-hidden-checkbox"
+              type="checkbox"
+              name="terms"
+              id="terms"
+              required
+            />
+
+            <label class="privacy-label" for="terms">
+              <span class="checkbox-mark" aria-hidden="true">
+                <svg width="10" height="8">
+                  <use href="./images/icons.svg#v"></use>
+                </svg>
+              </span>
+
+              <span>
+                I accept the terms and conditions of
+                <a href="#">Privacy Policy</a>
+              </span>
+            </label>
+          </div>
+          <!-- <label>
+            <input type="checkbox" name="hobby" value="music" checked /> I
+            accept the terms and conditions of the <a href="">Privacy Policy</a>
+          </label> -->
+          <button class="form-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
   </body>
 </html>
